@@ -19,6 +19,6 @@ export class Tomagotchi {
   }
   
   napTomagotchi() {
-    this.sleep += 10;
+    this.sleep += 1;
   }
 }
