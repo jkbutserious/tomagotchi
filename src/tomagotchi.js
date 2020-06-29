@@ -10,6 +10,7 @@ export class Tomagotchi {
     setInterval(() => {
       this.hunger--;
       this.sleep--;
+      this.play++;
     }, 1000);
   }
 

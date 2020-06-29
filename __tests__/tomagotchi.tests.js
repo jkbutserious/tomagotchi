@@ -28,4 +28,9 @@ describe('Tomagotchi', () => {
     jest.advanceTimersByTime(3001);
     expect(myTomagotchi.sleep).toBe(7);
   });
+
+  test('Should periodically lower tomagotchi play level', () => {
+    jest.advanceTimersByTime(3001);
+    expect(myTomagotchi.play).toBe(7);
+  });
 })
