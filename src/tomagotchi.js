@@ -9,6 +9,7 @@ export class Tomagotchi {
   lowerStats() {
     setInterval(() => {
       this.hunger--;
+      this.sleep++;
     }, 1000);
   }
 
