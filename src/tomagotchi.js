@@ -1,8 +1,8 @@
 // Business Logic
 export class Tomagotchi {
   constructor(hunger, sleep, play) {
-    this.hunger = 0;
-    this.sleep = 0;
-    this.play = 0;
+    this.hunger = hunger;
+    this.sleep = sleep;
+    this.play = play;
   }
 }
