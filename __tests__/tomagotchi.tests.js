@@ -43,4 +43,9 @@ describe('Tomagotchi', () => {
     myTomagotchi.napTomagotchi();
     expect(myTomagotchi.sleep).toEqual(11);
   });
+
+  test(`Should "play" with tomagotchi by increasing it's play levels`, () => {
+    myTomagotchi.playTomagotchi();
+    expect(myTomagotchi.play).toEqual(11);
+  });
 });

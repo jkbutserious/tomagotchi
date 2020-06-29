@@ -21,4 +21,8 @@ export class Tomagotchi {
   napTomagotchi() {
     this.sleep += 1;
   }
+
+  playTomagotchi() {
+    this.play += 10;
+  }
 }
