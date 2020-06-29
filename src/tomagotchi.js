@@ -23,6 +23,6 @@ export class Tomagotchi {
   }
 
   playTomagotchi() {
-    this.play += 10;
+    this.play += 1;
   }
 }
