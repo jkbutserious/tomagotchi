@@ -14,6 +14,6 @@ export class Tomagotchi {
     }, 1000);
   }
   feedTomagotchi() {
-    this.hunger += 2;
+    this.hunger += 1;
   }
 }
