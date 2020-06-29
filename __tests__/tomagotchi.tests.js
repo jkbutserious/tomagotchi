@@ -6,7 +6,7 @@ describe('Tomagotchi', () => {
 
   beforeEach(() => {
     myTomagotchi = new Tomagotchi(10, 10, 10);
-    myTomagotchi.lowerHunger();
+    myTomagotchi.lowerStats();
   });
 
   afterEach(function() {
@@ -22,5 +22,5 @@ describe('Tomagotchi', () => {
   test('Should periodically lower tomagotchi hunger level', () => {
     jest.advanceTimersByTime(3001);
     expect(myTomagotchi.hunger).toBe(7);
-  })
+  });
 })
