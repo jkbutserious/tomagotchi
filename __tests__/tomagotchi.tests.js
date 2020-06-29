@@ -5,7 +5,7 @@ describe('Tomagotchi', () => {
   let myTomagotchi;
 
   beforeEach(() => {
-    myTomagotchi = new Tomagotchi(10, 10, 10);
+    myTomagotchi = new Tomagotchi(10, 10, 10, 10);
     myTomagotchi.lowerStats();
   });
 
@@ -17,6 +17,8 @@ describe('Tomagotchi', () => {
     expect(myTomagotchi.hunger).toBe(10);
     expect(myTomagotchi.sleep).toBe(10);
     expect(myTomagotchi.play).toBe(10);
+    expect(myTomagotchi.health).toBe(10);
+    expect(myTomagotchi.status).toEqual([]);
   });
 
   test('Should periodically lower tomagotchi hunger level', () => {
@@ -47,5 +49,12 @@ describe('Tomagotchi', () => {
   test(`Should "play" with tomagotchi by increasing it's play levels`, () => {
     myTomagotchi.playTomagotchi();
     expect(myTomagotchi.play).toEqual(11);
+  });
+
+  test('should check whether each property level is greater than 10 and then enter a corresponding boolean value into the tomagotchi status array', () => {
+    myTomagotchi.hunger = 12;
+    expect(myTomagotchi.status[0]).toEqual(true);
+    expect(myTomagotchi.status[1]).toEqual(false);
+    expect(myTomagotchi.status[2]).toEqual(false);
   });
 });

@@ -3,27 +3,90 @@
 
 <head>
   <script type="text/javascript" src="bundle.js"></script>
-  <title>Project Name</title>
+  <title>Tomagatchi!</title>
 </head>
 
 <body>
-  <!-- Some sort of HTML that directly correlates with your main.js -->
 
-  <!-- Uncomment the following code to check that bootstrap is working! -->
+<div class="sidebar" id="tomagatchiStats">
+  <ul id="tomaStats">
+    <li>Example Name: Hamtaro</li>
+    <li>Example Stats: Hunger 8/10, Fatigue 4/10, Energy 9/10</li>
+  </ul>
+</div>
 
-  <!-- <div class="card">
-  <div class="card" style="width: 18rem;">
-    <img class="card-img-top"
-      src="https://images.unsplash.com/photo-1534278931827-8a259344abe7?ixlib=rb-1.2.1&w=1000&q=80"
-      alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This should be a working card class!
-      </p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
+<div class="row">
+
+  <div class="col-md-3">
+    <h2>How to Play</h2>
+    <p>It's fun and easier than ever before to play with your very own Tomagatchi! But we can't forget they are more than just pets, they have feelings too!</p>
+    <p>So, it's important to know how to take care of your Tomagatchi! They have 3 key <strong>attributes</strong></p>
+    <ul>
+      <li>Hunger: Don't let them starve, but don't overfeed them either! Tomagatchi's love food <em>too</em> much!</li>
+      <li>Fatigue: How tired they are! They need sleep to be healthy, but too much sleep is bad for them too!</li>
+      <li>Energy: How playful and bored your Tomagatchi is! If it's too low they can get sick, but if it's too high they can misbehave too!</li>
+    </ul>
   </div>
-</div> -->
+
+  <div class="col-md-6">
+    <h1>Overhead</h1>
+    <ul>
+      <li>You have: <span class="numberOfTomagatchis">2</span> Tomagatchi's</li>
+      <li><span class="tomagatchi1Name"></span> <span class="toma1Hunger"></span> <span class="toma1Fatigue"></span> <span class="toma1Energy"></span></li>
+      <li><span class="tomagatchi2Name"></span> <span class="toma2Hunger"></span> <span class="toma2Fatigue"></span> <span class="toma2Energy"></span></li>
+      <li><span class="tomagatchi3Name"></span> <span class="toma3Hunger"></span> <span class="toma3Fatigue"></span> <span class="toma3Energy"></span></li>
+    </ul>
+  </div>
+
+  <div class="col-md-3">
+    <h2>Maintenence!</h2>
+    <br>
+    <button class="feedToma1">Feed <span class="tomagatchi1Name"></span>!</button>
+    <br>
+    <button class="napToma1">Put <span class="tomagatchi1Name"></span> down for a nap!</button>
+    <br>
+    <button class="playToma1">Play with <span class="tomagatchi1Name"></span>!</button>
+    <br>
+    <button class="feedToma2">Feed <span class="tomagatchi2Name"></span>!</button>
+    <br>
+    <button class="napToma2">Put <span class="tomagatchi2Name"></span> down for a nap!</button>
+    <br>
+    <button class="playToma2">Play with <span class="tomagatchi2Name"></span>!</button>
+    <br>
+    <button class="feedToma3">Feed <span class="tomagatchi3Name"></span></button>
+    <br>
+    <button class="napToma3">Put <span class="tomagatchi3Name"></span> down for a nap!</button>
+    <br>
+    <button class="playToma3">Play with <span class="tomagatchi3Name"></span>!</button>
+  </div>
+
+</div>
+
+<div class="sidebar" id="newTomagatchi">
+  <label for="orderTomagatchiName">Create a name for your new Tomagatchi!</label>
+  <br>
+  <input type="text" required class="newTomagatchiName">
+  <br>
+
+<div class="radio">
+  <label for="orderTomagatchiType">I want a cat Tomagatchi!<input type="radio" name="orderTomagatchiType" required value="cat"></label>
+  <br>
+</div>
+
+<div class="radio">
+  <label for="orderTomagatchiType">I want a dog Tomagatchi!<input type="radio" name="orderTomagatchiType" required value="dog"></label>
+  <br>
+</div>
+
+<div class="radio">
+  <label for="orderTomagatchiType">I want a human Tomagatchi!<input type="radio" name="orderTomagatchiType" required value="human"></label>
+  <br>
+  <br>
+  <button type="submit" class="orderTomaBtn"></button>
+</div>
+
+</div>
+
 </body>
 
 </html>
