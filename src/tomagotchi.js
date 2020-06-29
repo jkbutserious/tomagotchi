@@ -13,5 +13,7 @@ export class Tomagotchi {
       this.play--;
     }, 1000);
   }
-
+  feedTomagotchi() {
+    this.hunger += 2;
+  }
 }

@@ -33,4 +33,11 @@ describe('Tomagotchi', () => {
     jest.advanceTimersByTime(3001);
     expect(myTomagotchi.play).toBe(7);
   });
-})
+
+  test('Should feed Tomagotchi and increase hunger by 1', () => {
+    myTomagotchi.feedTomagotchi();
+    expect(myTomagotchi.hunger).toEqual(11);
+  });
+});
+//  expect(myTomagotchi.feedTomagotchi()).toEqual(10);
+// toBe vs toEqual
