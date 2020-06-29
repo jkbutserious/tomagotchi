@@ -4,5 +4,12 @@ export class Tomagotchi {
     this.hunger = hunger;
     this.sleep = sleep;
     this.play = play;
+  };
+
+  lowerHunger() {
+    setInterval(() => {
+      this.hunger++;
+    }, 1000);
   }
+
 }
