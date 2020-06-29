@@ -38,6 +38,9 @@ describe('Tomagotchi', () => {
     myTomagotchi.feedTomagotchi();
     expect(myTomagotchi.hunger).toEqual(11);
   });
+
+  test('Should forcibly nap the tomagotchi, resulting in 1 hour of precious relief', () => {
+    myTomagotchi.napTomagotchi();
+    expect(myTomagotchi.sleep).toEqual(11);
+  });
 });
-//  expect(myTomagotchi.feedTomagotchi()).toEqual(10);
-// toBe vs toEqual

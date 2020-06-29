@@ -13,7 +13,12 @@ export class Tomagotchi {
       this.play--;
     }, 1000);
   }
+  
   feedTomagotchi() {
     this.hunger += 1;
+  }
+  
+  napTomagotchi() {
+    this.sleep += 10;
   }
 }
