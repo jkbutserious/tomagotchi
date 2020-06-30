@@ -6,10 +6,12 @@ export class Tomagotchi {
     this.play = play;
     this.health = health;
     this.status = [];
+    this.isDead = false;
   };
 
   lowerStats() {
     setInterval(() => {
+      this.isDeadOrNot;
       this.hunger--;
       this.sleep--;
       this.play--;
@@ -38,6 +40,7 @@ export class Tomagotchi {
   tomagotchiHealthCheck() {
     this.status = [];
     let tomagotchiStats = [this.hunger, this.sleep, this.play];
+    this.isDeadOrNot();
     tomagotchiStats.forEach(element => {
       if (element > 10) {
         this.status.push(2);
@@ -47,7 +50,6 @@ export class Tomagotchi {
         this.status.push(1);
       }
     });
-    
   };
 
   checkHealthStatus() {
@@ -58,6 +60,15 @@ export class Tomagotchi {
     });
     if (this.status[0] === 1 && this.status[1] === 1 && this.status[2] === 1) {
       this.health += 1;
+    }
+  }
+
+  isDeadOrNot() {
+    if (this.health === 0) {
+      this.dead = false;
+      this.play = 0;
+      this.hunger = 0;
+      this.sleep = 0;
     }
   }
 }

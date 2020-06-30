@@ -66,5 +66,14 @@ describe('Tomagotchi', () => {
     myTomagotchi.health = 9;
     jest.advanceTimersByTime(1001);
     expect(myTomagotchi.health).toBe(10);
-  })
+  });
+
+  test('Should state tomagotchi isDead property as true', () => {
+    myTomagotchi.health = 0;
+    jest.advanceTimersByTime(1001);
+    expect(myTomagotchi.isDead).toBe(true);
+    expect(myTomagotchi.hunger).toBe(0)
+    expect(myTomagotchi.sleep).toBe(0)
+    expect(myTomagotchi.play).toBe(0)
+  });
 });
