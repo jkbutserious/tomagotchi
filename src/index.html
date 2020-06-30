@@ -1,71 +1,79 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <script type="text/javascript" src="bundle.js"></script>
-    <title>Tomagatchi!</title>
-  </head>
+<head>
+  <script type="text/javascript" src="bundle.js"></script>
+  <title>Tomagatchi!</title>
+</head>
 
-  <body>
+<body>
 
-    <div class="sidebar" id="tomagatchiStats">
+  <!-- <div class="sidebar" id="tomagatchiStats">
       <ul id="tomaStats">
         <li>Example Name: Hamtaro</li>
         <li>Example Stats: Hunger 8/10, Fatigue 4/10, Energy 9/10</li>
       </ul>
+    </div> -->
+
+  <br>
+  <h1>My Very Own Tomagatchi!</h1>
+  <br>
+  
+  <div class="row">
+
+    <div class="col-md-3">
+      <h2>How to Play</h2>
+      <p>It's fun and easier than ever before to play with your very own Tomagatchi! But we can't forget they are more than just pets, they have feelings too!</p>
+      <p>So, it's important to know how to take care of your Tomagatchi! They have 3 key <strong>attributes</strong></p>
+      <ul>
+        <li>Hunger: Don't let them starve, but don't overfeed them either! Tomagatchi's love food <em>too</em> much!</li>
+        <li>Fatigue: How tired they are! They need sleep to be healthy, but too much sleep is bad for them too!</li>
+        <li>Energy: How playful and bored your Tomagatchi is! If it's too low they can get sick, but if it's too high they can misbehave too!</li>
+      </ul>
     </div>
 
-    <div class="row">
+    <div class="col-md-4">
+      <h1>Overhead</h1>
+      <ul>
+        <li><span id="tomagatchi1Name"></li>
+        <br>
+        <li>Hunger: <span id="tomagotchi-hunger"></span></li>
+        <li>Fatigue: <span id="tomagotchi-sleep"></span></li>
+        <li>Energy: <span id="tomagotchi-play"></span></li>
+      </ul>
 
-      <div class="col-md-3">
-        <h2>How to Play</h2>
-        <p>It's fun and easier than ever before to play with your very own Tomagatchi! But we can't forget they are more than just pets, they have feelings too!</p>
-        <p>So, it's important to know how to take care of your Tomagatchi! They have 3 key <strong>attributes</strong></p>
-        <ul>
-          <li>Hunger: Don't let them starve, but don't overfeed them either! Tomagatchi's love food <em>too</em> much!</li>
-          <li>Fatigue: How tired they are! They need sleep to be healthy, but too much sleep is bad for them too!</li>
-          <li>Energy: How playful and bored your Tomagatchi is! If it's too low they can get sick, but if it's too high they can misbehave too!</li>
-        </ul>
+      <div id="dead">
+        <h3>Your Tomagotchi Died</h3>
+        <img src="https://img.icons8.com/color/48/000000/self-destruct-button--v1.png"/>
       </div>
-
-      <div class="col-md-6">
-        <h1>Overhead</h1>
-        <ul>
-          <li>You have: <span class="numberOfTomagatchis">2</span> Tomagatchi's</li>
-          <li><span class="tomagatchi1Name"></span> <span class="toma1Hunger"></span> <span class="toma1Fatigue"></span> <span class="toma1Energy"></span></li>
-          <li><span class="tomagatchi2Name"></span> <span class="toma2Hunger"></span> <span class="toma2Fatigue"></span> <span class="toma2Energy"></span></li>
-          <li><span class="tomagatchi3Name"></span> <span class="toma3Hunger"></span> <span class="toma3Fatigue"></span> <span class="toma3Energy"></span></li>
-        </ul>
-      </div>
-
-      <div class="col-md-3">
-        <h2>Maintenence!</h2>
-        <br>
-        <button class="feedToma1">Feed <span class="tomagatchi1Name"></span>!</button>
-        <br>
-        <button class="napToma1">Put <span class="tomagatchi1Name"></span> down for a nap!</button>
-        <br>
-        <button class="playToma1">Play with <span class="tomagatchi1Name"></span>!</button>
-        <br>
-        <button class="feedToma2">Feed <span class="tomagatchi2Name"></span>!</button>
-        <br>
-        <button class="napToma2">Put <span class="tomagatchi2Name"></span> down for a nap!</button>
-        <br>
-        <button class="playToma2">Play with <span class="tomagatchi2Name"></span>!</button>
-        <br>
-        <button class="feedToma3">Feed <span class="tomagatchi3Name"></span></button>
-        <br>
-        <button class="napToma3">Put <span class="tomagatchi3Name"></span> down for a nap!</button>
-        <br>
-        <button class="playToma3">Play with <span class="tomagatchi3Name"></span>!</button>
-      </div>
-
     </div>
 
-    <div class="sidebar" id="newTomagatchi">
+    <div class="col-md-3">
+      <h2>Maintenence!</h2>
+      <br>
+      <button class="feedToma1">Feed your Tomagatchi!!</button>
+      <br><br>
+      <button class="napToma1">Put your Tomagotchi down for a nap!</button>
+      <br><br>
+      <button class="playToma1" type="submit">Play with your Tomagotchi!</button>
+      <!-- <br>
+      <button class="btn feedToma2">Feed <span class="tomagatchi2Name"></span>!</button>
+      <br>
+      <button class="btn napToma2">Put <span class="tomagatchi2Name"></span> down for a nap!</button>
+      <br>
+      <button class="btn playToma2">Play with <span class="tomagatchi2Name"></span>!</button>
+      <br>
+      <button class="btn feedToma3">Feed <span class="tomagatchi3Name"></span></button>
+      <br>
+      <button class="btn napToma3">Put <span class="tomagatchi3Name"></span> down for a nap!</button>
+      <br>
+      <button class="btn playToma3">Play with <span class="tomagatchi3Name"></span>!</button> -->
+    </div>
+
+    <div class="col-md-2" id="newTomagatchi">
       <label for="orderTomagatchiName">Create a name for your new Tomagatchi!</label>
       <br>
-      <input type="text" required class="newTomagatchiName">
+      <input id="orderTomagatchiName" type="text" required>
       <br>
 
       <div class="radio">
@@ -82,11 +90,15 @@
         <label for="orderTomagatchiType">I want a human Tomagatchi!<input type="radio" name="orderTomagatchiType" required value="human"></label>
         <br>
         <br>
-        <button type="submit" class="orderTomaBtn"></button>
-      </div>
+        <button type="submit" class="orderTomaBtn">Order Tomagotchi!</button>
+        <br>
+        <br>
 
+      </div>
     </div>
 
-  </body>
+  </div>
+
+</body>
 
 </html>

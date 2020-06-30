@@ -1,5 +1,29 @@
 /* Some CSS! */
 body {
   text-align: center;
-  background-color: antiquewhite;
+  background-color: cadetblue;
+}
+
+#tomagatchiStats {
+  float: left;
+  border: 3px solid black;
+}
+
+#newTomagatchi {
+  float: right;
+  border: 3px solid black;
+}
+
+#dead {
+  display: none;
+  color: red;
+  font-family: impact;
+}
+
+.row {
+  display: flex;
+}
+
+.col-md-3, .col-md-6, .col-md-2, .col-md-4 {
+  border: 3px solid black
 }
