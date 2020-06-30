@@ -18,7 +18,7 @@ $(document).ready(function () {
   $('.orderTomaBtn').click(function() {
     myTomagotchi.name = $("#newTomagotchiName").val();
     myTomagotchi.tomagotchiReset();
-    $('#tomagatchi1Name').text(myTomagotchi.name);
+    $('#tomagotchi1Name').text(myTomagotchi.name);
     $("#dead").hide();
     // Note - will need adjustment to create new one?
   });
