@@ -51,10 +51,14 @@ describe('Tomagotchi', () => {
     expect(myTomagotchi.play).toEqual(11);
   });
 
-  test('should check whether each property level is greater than 10 and then enter a corresponding boolean value into the tomagotchi status array', () => {
+  test('should check whether each property level is greater than 10 or 3 or less and then decrease the health property by the number of properties that are over 10/3 or less', () => {
     myTomagotchi.hunger = 12;
-    expect(myTomagotchi.status[0]).toEqual(true);
-    expect(myTomagotchi.status[1]).toEqual(false);
-    expect(myTomagotchi.status[2]).toEqual(false);
+    // myTomagotchi.play = 2;
+    myTomagotchi.tomagotchiHealthCheck();
+    expect(myTomagotchi.status[0]).toEqual(2);
+    expect(myTomagotchi.status[1]).toEqual(1);
+    expect(myTomagotchi.status[2]).toEqual(0);
+    expect(myTomagotchi.health).toBe(8);
   });
+
 });
