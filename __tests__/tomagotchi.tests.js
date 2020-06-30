@@ -54,11 +54,17 @@ describe('Tomagotchi', () => {
   test('should check whether each property level is greater than 10 or 3 or less and then decrease the health property by the number of properties that are over 10/3 or less', () => {
     myTomagotchi.hunger = 12;
     myTomagotchi.play = 2;
-    myTomagotchi.tomagotchiHealthCheck();
+    // myTomagotchi.tomagotchiHealthCheck();
     jest.advanceTimersByTime(1001);
     expect(myTomagotchi.status[0]).toEqual(2);
     expect(myTomagotchi.status[1]).toEqual(1);
     expect(myTomagotchi.status[2]).toEqual(0);
     expect(myTomagotchi.health).toBe(8);
   });
+
+  test('Should increase tomagotchi health if all status modifiers are at 1/healthy', () => {
+    myTomagotchi.health = 9;
+    jest.advanceTimersByTime(1001);
+    expect(myTomagotchi.health).toBe(10);
+  })
 });

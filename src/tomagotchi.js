@@ -14,10 +14,10 @@ export class Tomagotchi {
       this.sleep--;
       this.play--;
       this.tomagotchiHealthCheck();
-      this.checkTrueFalse();
+      this.checkHealthStatus();
     }, 1000);
   }
-  
+
   feedTomagotchi() {
     this.hunger += 1;
     this.tomagotchiHealthCheck();
@@ -33,7 +33,7 @@ export class Tomagotchi {
     this.tomagotchiHealthCheck();
   }
 
-  // 0 = "starving" etc., 1 = "healthy", 2 = "over done"
+  // 0 = "deficient", 1 = "healthy", 2 = "in excess"
   
   tomagotchiHealthCheck() {
     this.status = [];
@@ -50,11 +50,14 @@ export class Tomagotchi {
     
   };
 
-  checkTrueFalse() {
+  checkHealthStatus() {
     this.status.forEach(element => {
       if (element === 2 || element === 0) {
         this.health -= 1;
       }
     });
+    if (this.status[0] === 1 && this.status[1] === 1 && this.status[2] === 1) {
+      this.health += 3;
+    }
   }
 }
