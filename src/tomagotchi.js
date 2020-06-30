@@ -57,7 +57,7 @@ export class Tomagotchi {
       }
     });
     if (this.status[0] === 1 && this.status[1] === 1 && this.status[2] === 1) {
-      this.health += 3;
+      this.health += 1;
     }
   }
 }
